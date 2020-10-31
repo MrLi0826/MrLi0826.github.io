@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我站在有阳光的地方等你">
-<meta property="og:type" content="website">
-<meta property="og:title" content="执笔抒情">
-<meta property="og:url" content="http://example.com/archives/2020/10/index.html">
+  <meta name="description" content="&#96;八皇后问题是使用回溯算法解决的典型案例。算法的解决思路是：  从棋盘的第一行开始，从第一个位置开始，依次判断当前位置是否能够放置皇后，判断的依据为：同该行之前的所有行中皇后的所在位置进行比较，如果在同一列，或者在同一条斜线上（斜线有两条，为正方形的两个对角线），都不符合要求，继续检验后序的位置。 如果该行所有位置都不符合要求，则回溯到前一行，改变皇后的位置，继续试探。 如果试探到最后一行，所有皇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="回溯算法解决八皇问题">
+<meta property="og:url" content="http://example.com/2020/11/01/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E5%85%AB%E7%9A%87%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="执笔抒情">
-<meta property="og:description" content="我站在有阳光的地方等你">
+<meta property="og:description" content="&#96;八皇后问题是使用回溯算法解决的典型案例。算法的解决思路是：  从棋盘的第一行开始，从第一个位置开始，依次判断当前位置是否能够放置皇后，判断的依据为：同该行之前的所有行中皇后的所在位置进行比较，如果在同一列，或者在同一条斜线上（斜线有两条，为正方形的两个对角线），都不符合要求，继续检验后序的位置。 如果该行所有位置都不符合要求，则回溯到前一行，改变皇后的位置，继续试探。 如果试探到最后一行，所有皇">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-31T18:51:13.000Z">
+<meta property="article:modified_time" content="2020-10-31T18:52:21.149Z">
 <meta property="article:author" content="QiuMingLi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2020/10/">
+<link rel="canonical" href="http://example.com/2020/11/01/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E5%85%AB%E7%9A%87%E9%97%AE%E9%A2%98/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | 执笔抒情</title>
+  <title>回溯算法解决八皇问题 | 执笔抒情</title>
   
 
 
@@ -169,90 +171,99 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/01/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E8%A7%A3%E5%86%B3%E5%85%AB%E7%9A%87%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.png">
+      <meta itemprop="name" content="QiuMingLi">
+      <meta itemprop="description" content="我站在有阳光的地方等你">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="执笔抒情">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          回溯算法解决八皇问题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-01 02:51:13 / 修改时间：02:52:21" itemprop="dateCreated datePublished" datetime="2020-11-01T02:51:13+08:00">2020-11-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-22T00:16:19+08:00"
-              content="2020-10-22">
-          10-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/22/%E8%A1%8C%E9%80%BB%E8%BE%91%E9%93%BE%E6%8E%A5%E5%AE%9E%E7%8E%B0%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98/" itemprop="url">
-            <span itemprop="name">行逻辑链接实现矩阵相乘</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-20T11:16:49+08:00"
-              content="2020-10-20">
-          10-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/20/text-my-iste/" itemprop="url">
-            <span itemprop="name">text_my_iste</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-20T11:09:20+08:00"
-              content="2020-10-20">
-          10-20
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/20/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <p>`八皇后问题是使用回溯算法解决的典型案例。算法的解决思路是：</p>
+<ol>
+<li>从棋盘的第一行开始，从第一个位置开始，依次判断当前位置是否能够放置皇后，判断的依据为：同该行之前的所有行中皇后的所在位置进行比较，如果在同一列，或者在同一条斜线上（斜线有两条，为正方形的两个对角线），都不符合要求，继续检验后序的位置。</li>
+<li>如果该行所有位置都不符合要求，则回溯到前一行，改变皇后的位置，继续试探。</li>
+<li>如果试探到最后一行，所有皇后摆放完毕，则直接打印出 8*8 的棋盘。最后一定要记得将棋盘恢复原样，避免影响下一次摆放。</li>
+</ol>
+<p><code>#include &lt;stdio.h&gt;</code><br><code>int Queenes[8] = &#123; 0 &#125;, Counts = 0;</code></p>
+<p><code>//检查是否冲突</code><br><code>int Check(int line, int list) &#123;</code><br>    <code>//遍历该行之前的所有行</code><br>    <code>for (int index = 0; index &lt; line; index++) &#123;</code><br>        <code>//挨个取出前面行中皇后所在位置的列坐标</code><br>        <code>int data = Queenes[index];</code><br>        <code>//如果在同一列，该位置不能放</code><br>        <code>if (list == data) &#123;</code><br>            <code>return 0;</code><br>        <code>&#125;</code><br>        <code>//如果当前位置的斜上方有皇后，在一条斜线上，也不行</code><br>        <code>if ((index + data) == (line + list)) &#123;</code><br>            <code>return 0;</code><br>        <code>&#125;</code><br>        <code>//如果当前位置的斜下方有皇后，在一条斜线上，也不行</code><br>        <code>if ((index - data) == (line - list)) &#123;</code><br>            <code>return 0;</code><br>        <code>&#125;</code><br>    <code>&#125;</code><br>    <code>//如果以上情况都不是，当前位置就可以放皇后</code><br>    <code>return 1;</code><br><code>&#125;</code></p>
+<p><code>//输出语句</code><br><code>void print()</code><br><code>&#123;</code><br>    <code>for (int line = 0; line &lt; 8; line++)</code><br>    <code>&#123;</code><br>        <code>int list;</code><br>        <code>for (list = 0; list &lt; Queenes[line]; list++)</code><br>            <code>printf(&quot;0&quot;);</code><br>        <code>printf(&quot;#&quot;);</code><br>        <code>for (list = Queenes[line] + 1; list &lt; 8; list++) &#123;</code><br>            <code>printf(&quot;0&quot;);</code><br>        <code>&#125;</code><br>        <code>printf(&quot;\n&quot;);</code><br>    <code>&#125;</code><br>    <code>printf(&quot;================\n&quot;);</code><br><code>&#125;</code></p>
+<p><code>//回溯</code><br><code>void eight_queen(int line) &#123;</code><br>    <code>//在数组中为0-7列</code><br>    <code>for (int list = 0; list &lt; 8; list++) &#123;</code><br>        <code>//对于固定的行列，检查是否和之前的皇后位置冲突</code><br>        <code>if (Check(line, list)) &#123;</code><br>            <code>//不冲突，以行为下标的数组位置记录列数</code><br>            <code>Queenes[line] = list;</code><br>            <code>//如果最后一样也不冲突，证明为一个正确的摆法</code><br>            <code>if (line == 7) &#123;</code><br>                <code>//统计摆法的Counts加1</code><br>                <code>Counts++;</code><br>                <code>//输出这个摆法</code><br>                <code>print();</code><br>                <code>//每次成功，都要将数组重归为0</code><br>                <code>Queenes[line] = 0;</code><br>                <code>return;</code><br>            <code>&#125;</code><br>            <code>//继续判断下一样皇后的摆法，递归</code><br>            <code>eight_queen(line + 1);</code><br>            <code>//不管成功失败，该位置都要重新归0，以便重复使用。</code><br>            <code>Queenes[line] = 0;</code><br>        <code>&#125;</code><br>    <code>&#125;</code><br><code>&#125;</code><br><code>int main() &#123;</code><br>    <code>//调用回溯函数，参数0表示从棋盘的第一行开始判断</code><br>    <code>eight_queen(0);</code><br>    <code>printf(&quot;摆放的方式有%d种&quot;, Counts);</code><br>    <code>return 0;</code><br><code>&#125;</code></p>
 
     </div>
-  </div>
-  
-  
-  
 
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/22/%E8%A1%8C%E9%80%BB%E8%BE%91%E9%93%BE%E6%8E%A5%E5%AE%9E%E7%8E%B0%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98/" rel="prev" title="行逻辑链接实现矩阵相乘">
+      <i class="fa fa-chevron-left"></i> 行逻辑链接实现矩阵相乘
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
